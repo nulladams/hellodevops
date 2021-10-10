@@ -1,16 +1,11 @@
 setup:
-    python3 -m venv ~/.hellodevops
+	python3 -m venv ~/.hellodevops
 
 install:
-    pip install --upgrade pip &&\
-        pip install -r requirements.txt
-
-test:
-    #python -m pytest -vv --cov=myrepolib tests/*.py
-    #python -m pytest --nbval notebook.ipynb
-
-
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
+	
 lint:
-    pylint --disable=R,C app.py
+	pylint --disable=R,C app.py
 
-all: install lint test
+all: install lint
